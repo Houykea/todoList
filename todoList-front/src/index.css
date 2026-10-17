@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/figtree";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Figtree Variable', sans-serif;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    /* Light theme — cream/mauve surfaces, deep plum ink.
+       Palette: #190019 #2B124C #522B5B #854F6C #DFB6B2 #FBE4D8 */
+    --background: oklch(0.955 0.018 40);      /* soft #FBE4D8 */
+    --foreground: oklch(0.17 0.05 316);       /* #190019 */
+    --card: oklch(0.995 0.004 60);            /* near-white, faint warm */
+    --card-foreground: oklch(0.17 0.05 316);
+    --popover: oklch(0.995 0.004 60);
+    --popover-foreground: oklch(0.17 0.05 316);
+    --primary: oklch(0.3 0.1 310);            /* #2B124C */
+    --primary-foreground: oklch(0.985 0.01 50);
+    --secondary: oklch(0.93 0.025 30);        /* light blush */
+    --secondary-foreground: oklch(0.3 0.1 310);
+    --muted: oklch(0.95 0.015 40);
+    --muted-foreground: oklch(0.5 0.07 330);
+    --accent: oklch(0.62 0.1 350);            /* #854F6C */
+    --accent-foreground: oklch(0.99 0.01 50);
+    --destructive: oklch(0.55 0.2 20);
+    --border: oklch(0.9 0.025 30);
+    --input: oklch(0.9 0.025 30);
+    --ring: oklch(0.62 0.1 350);              /* #854F6C */
+    --chart-1: oklch(0.3 0.1 310);
+    --chart-2: oklch(0.46 0.09 330);
+    --chart-3: oklch(0.6 0.1 350);
+    --chart-4: oklch(0.75 0.06 20);
+    --chart-5: oklch(0.88 0.04 25);
+    --radius: 0.9rem;
+    --sidebar: oklch(0.98 0.015 45);
+    --sidebar-foreground: oklch(0.17 0.05 316);
+    --sidebar-primary: oklch(0.3 0.1 310);
+    --sidebar-primary-foreground: oklch(0.955 0.018 40);
+    --sidebar-accent: oklch(0.6 0.1 350);
+    --sidebar-accent-foreground: oklch(0.98 0.015 45);
+    --sidebar-border: oklch(0.84 0.04 28);
+    --sidebar-ring: oklch(0.6 0.1 350);
+}
+
+.dark {
+    /* Dark theme — deep plum surfaces, cream ink. */
+    --background: oklch(0.17 0.05 316);       /* #190019 */
+    --foreground: oklch(0.95 0.02 40);        /* #FBE4D8 */
+    --card: oklch(0.26 0.09 305);             /* #2B124C */
+    --card-foreground: oklch(0.95 0.02 40);
+    --popover: oklch(0.26 0.09 305);
+    --popover-foreground: oklch(0.95 0.02 40);
+    --primary: oklch(0.82 0.05 25);           /* #DFB6B2 */
+    --primary-foreground: oklch(0.2 0.06 312);
+    --secondary: oklch(0.4 0.09 328);         /* #522B5B */
+    --secondary-foreground: oklch(0.95 0.02 40);
+    --muted: oklch(0.32 0.08 312);
+    --muted-foreground: oklch(0.78 0.05 28);
+    --accent: oklch(0.58 0.1 350);            /* #854F6C */
+    --accent-foreground: oklch(0.97 0.015 42);
+    --destructive: oklch(0.7 0.19 22);
+    --border: oklch(1 0 0 / 12%);
+    --input: oklch(1 0 0 / 16%);
+    --ring: oklch(0.58 0.1 350);
+    --chart-1: oklch(0.82 0.05 25);
+    --chart-2: oklch(0.58 0.1 350);
+    --chart-3: oklch(0.4 0.09 328);
+    --chart-4: oklch(0.3 0.1 310);
+    --chart-5: oklch(0.26 0.09 305);
+    --sidebar: oklch(0.26 0.09 305);
+    --sidebar-foreground: oklch(0.95 0.02 40);
+    --sidebar-primary: oklch(0.58 0.1 350);
+    --sidebar-primary-foreground: oklch(0.97 0.015 42);
+    --sidebar-accent: oklch(0.4 0.09 328);
+    --sidebar-accent-foreground: oklch(0.95 0.02 40);
+    --sidebar-border: oklch(1 0 0 / 12%);
+    --sidebar-ring: oklch(0.58 0.1 350);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
+
+/* Decorative gradient backdrop.
+   Light = plain white.
+   Dark  = deep plum. */
+.app-backdrop {
+  background: #ffffff;
+}
+
+.dark .app-backdrop {
+  background:
+    radial-gradient(1100px 560px at 8% -12%, color-mix(in oklch, #854F6C 42%, transparent), transparent 60%),
+    radial-gradient(950px 480px at 100% 0%, color-mix(in oklch, #522B5B 55%, transparent), transparent 55%),
+    linear-gradient(160deg, #190019 0%, #2B124C 48%, #3a1b5c 100%);
+}
+
+@keyframes todo-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-todo-in {
+  animation: todo-fade-in 0.25s ease-out;
+}
