@@ -1,0 +1,15 @@
+# VSCode Local History extension
+.history/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Root-level env files
+.env
+.env.local
+*.log
