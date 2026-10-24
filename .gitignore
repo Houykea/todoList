@@ -13,3 +13,6 @@ Thumbs.db
 .env
 .env.local
 *.log
+# other source
+backend-auth-notes.pdf
+generate_notes_pdf.py
